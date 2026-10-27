@@ -37,18 +37,13 @@ nav .nav-link:hover {
 nav .nav-link {
     color: #60a5fa;
 }
-\n.cv-navbar {
+.cv-navbar {
     background-color: #1e293b;
     border: 1px solid rgba(125, 211, 252, 0.45);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(8px);
 }
 
-.cv-navbar .navbar-brand {
-    color: #7dd3fc;
-}
-
-.cv-navbar .navbar-brand:hover,
 .cv-navbar .nav-link:hover {
     color: #ffffff;
 }
@@ -78,9 +73,11 @@ nav .nav-link {
     font-size: 1.2rem;
     font-weight: 400;
     text-shadow: none;
+    line-height: 1.5;
 }
 
 .contactLink {
+    white-space: nowrap;
     color: #cbd5e1 !important;
     text-decoration: none !important;
 }
@@ -130,7 +127,7 @@ nav .nav-link:focus {
 }
 
 .contentCard p {
-    text-align: justify;
+    text-align: left;
 }
 
 .contentCard ul {
