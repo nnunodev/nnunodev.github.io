@@ -18,7 +18,7 @@ body {
 h1,
 h2,
 h3 {
-    text-shadow: 2px 1px 1px #000000;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 #linkedin {
@@ -38,9 +38,9 @@ nav .nav-link {
     color: #60a5fa;
 }
 \n.cv-navbar {
-    background-color: rgba(30, 41, 59, 0.92);
-    border: 1px solid rgba(125, 211, 252, 0.35);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background-color: #1e293b;
+    border: 1px solid rgba(125, 211, 252, 0.45);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(8px);
 }
 
@@ -51,6 +51,41 @@ nav .nav-link {
 .cv-navbar .navbar-brand:hover,
 .cv-navbar .nav-link:hover {
     color: #ffffff;
+}
+
+.cv-navbar .nav-link {
+    position: relative;
+}
+
+.cv-navbar .nav-link::after {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.25rem;
+    left: 0.5rem;
+    height: 2px;
+    background-color: #7dd3fc;
+    content: "";
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.cv-navbar .nav-link:hover::after,
+.cv-navbar .nav-link:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.contactLink {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+    color: #7dd3fc;
+}
+
+#linkedin {
+    display: inline-block;
 }
 
 
