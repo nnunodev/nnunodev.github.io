@@ -1,2 +1,2 @@
-# nnunodev.github.io
-- `/` — NCI Web Design lab CV
+- `/` — NCI Web Design lab
+[CV website](https://nnunodev.github.io/)
