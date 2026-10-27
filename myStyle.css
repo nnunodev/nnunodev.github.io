@@ -89,6 +89,10 @@ nav .nav-link:focus {
     text-align: center;
 }
 
+#certifications .contentCard p {
+    text-align: center;
+}
+
 .backToTop {
     position: fixed;
     right: 24px;
