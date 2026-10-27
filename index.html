@@ -116,23 +116,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        const cvNavigation = document.getElementById("cvNavigation");
-        const menuToggle = document.querySelector(".navbar-toggler");
-
-        cvNavigation.querySelectorAll(".nav-link").forEach((link) => {
-            link.addEventListener("click", (event) => {
-                if (getComputedStyle(menuToggle).display !== "none" &&
-                    cvNavigation.classList.contains("show")) {
-                    event.preventDefault();
-                    cvNavigation.addEventListener("hidden.bs.collapse", () => {
-                        window.location.hash = link.hash;
-                    }, { once: true });
-                    bootstrap.Collapse.getOrCreateInstance(cvNavigation, { toggle: false }).hide();
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
