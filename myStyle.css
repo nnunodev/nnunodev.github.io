@@ -74,18 +74,36 @@ nav .nav-link {
     transform: scaleX(1);
 }
 
+.contactDetails {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: none;
+}
+
 .contactLink {
-    color: #e5e7eb;
-    text-decoration: none;
+    color: #cbd5e1 !important;
+    text-decoration: none !important;
 }
 
 .contactLink:hover,
 .contactLink:focus-visible {
+    color: #7dd3fc !important;
+}
+
+.contactLink .bi {
     color: #7dd3fc;
+    font-size: 0.95em;
 }
 
 #linkedin {
     display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+#linkedin:hover,
+#linkedin:focus-visible {
+    color: #7dd3fc;
 }
 
 
