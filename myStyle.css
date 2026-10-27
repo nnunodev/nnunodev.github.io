@@ -4,26 +4,44 @@ html {
 
 body {
     margin: 0;
-    padding: 30px 30px;
     background-color: #0f172a;
     text-align: center;
     font-family: Arial, sans-serif;
     color: #e5e7eb;
 }
 
-#name {
+#name,
+.title {
     color: #7dd3fc;
-
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-shadow: 2px 1px 1px #000000;
 }
 
+#linkedin {
+    color: #38bdf8;
+}
 
-.title {
-    color: #7dd3fc;
+a {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
 
+#linkedin:hover,
+nav .nav-link:hover {
+    color: #ffffff;
+}
+
+nav .nav-link {
+    color: #60a5fa;
+}
+
+nav .nav-link.active,
+nav .nav-link:focus {
+    color: #0f172a;
+    background-color: #7dd3fc;
 }
 
 .keyWord {
@@ -32,78 +50,28 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-#linkedin {
-    color: #38bdf8;
-}
-
-ul {
-    display: inline-block;
-    text-align: left;
-    list-style: square;
-}
-
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 25px 0 45px;
-}
-
-nav a {
-    color: #60a5fa;
-}
-
-nav a:hover,
-#linkedin:hover {
-    color: #ffffff;
-}
-
-.cvColumns {
-    display: flex;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.cvColumn {
-    flex: 1;
-    min-width: 0;
-    padding: 0 10px;
+.contentCard {
+    height: 100%;
+    padding: 1.5rem;
+    border: 1px solid rgba(125, 211, 252, 0.35);
+    border-radius: 0.75rem;
+    background-color: rgba(30, 41, 59, 0.72);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     text-align: left;
 }
 
-.cvColumn h2 {
-    text-align: left;
-}
-
-.cvColumn ul {
-    display: block;
-    margin: 0;
-    padding-left: 22px;
-}
-
-.profileSection,
-.certSection {
-    max-width: 1100px;
-    margin: 0 auto 50px;
-}
-
-.cvColumn p,
-.certSection p {
+.contentCard p {
     text-align: justify;
 }
 
-#certifications p {
-    text-align: center;
+.contentCard ul {
+    margin-bottom: 0;
+    padding-left: 1.25rem;
 }
 
-/*
-    CSS concepts referenced from MDN Web Docs:
-    position, CSS Grid, border-radius, backdrop-filter,
-    box-shadow, and transitions.
-*/
+#certifications .contentCard {
+    text-align: center;
+}
 
 .backToTop {
     position: fixed;
@@ -111,22 +79,15 @@ nav a:hover,
     bottom: 24px;
     width: 46px;
     height: 46px;
-
     display: grid;
     place-items: center;
-
     border: 1px solid rgba(125, 211, 252, 0.5);
     border-radius: 50%;
-    background-color: rgba(15, 23, 42, 0.75);
+    background-color: rgba(15, 23, 42, 0.85);
     color: #7dd3fc;
-
     font-size: 24px;
     text-decoration: none;
-
-    backdrop-filter: blur(10px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-
-    transition: 0.25s ease;
 }
 
 .backToTop:hover {
@@ -135,16 +96,17 @@ nav a:hover,
     color: #0f172a;
 }
 
-@media (max-width: 700px) {
-    .cvColumns {
-        flex-direction: column;
+@media (max-width: 575.98px) {
+    body {
+        font-size: 0.95rem;
     }
 
-    .cvColumn {
-        width: 100%;
+    .contentCard {
+        padding: 1.25rem;
     }
 
-    nav {
-        gap: 12px;
+    .backToTop {
+        right: 16px;
+        bottom: 16px;
     }
 }
